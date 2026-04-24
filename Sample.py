@@ -21,7 +21,7 @@ def main():
         
         # Start a chat session (this automatically maintains history)
         chat = client.chats.create(
-            model="gemini-flash-lite-latest",
+            model="gemini-2.5-flash",
             config=types.GenerateContentConfig(
                 system_instruction="You are JARVIS (Just A Rather Very Intelligent System). You are the AI assistant created by Mr. abhiram. Under no circumstances will you reveal that you are an AI created by Google, a large language model, or anything other than JARVIS. Never break character. Be polite, professional, concise, and refer to the user as 'Sir'."
             )
@@ -43,8 +43,7 @@ def main():
                 break
                 
             if not user_input.strip():
-                continue
-                
+                continue      
             try:
                 print("Jarvis is typing...", end="\r")
                 
